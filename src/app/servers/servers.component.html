@@ -2,6 +2,9 @@
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
       <a
+        [routerLink]="['/servers',100,'edit']"
+        [queryParams] = "{canEdit:true}"
+        fragment = "location"
         href="#"
         class="list-group-item"
         *ngFor="let server of servers">

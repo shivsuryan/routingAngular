@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   onLoadservers() {
-    this.router.navigate(['/servers'], { relativeTo: this.route });
+    this.router.navigate(['/servers'], { queryParams: { id: 100, name: 'prod' }, fragment: 'loading' });
   }
 
 }
