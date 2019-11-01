@@ -4,13 +4,16 @@
       <a
         href="#"
         class="list-group-item"
-        *ngFor="let user of users">
+        *ngFor="let user of users"
+        routerLink="[user.id,user.name]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
         {{ user.name }}
       </a>
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <app-user></app-user>
+    <!-- <app-user></app-user> -->
   </div>
 </div>
 
